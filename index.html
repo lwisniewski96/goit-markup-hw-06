@@ -556,31 +556,63 @@
           </svg>
         </button>
         <form name="signup_form" autocomplete="on" novalidate>
-          <h3 class="modal-main-text">Zostaw swoje dane w formularzu poniżej</h3>
-          <label>
-            Email
-            <input type="email" name="email" />
+          <h3 class="modal-main-text">
+            Zostaw swoje dane w formularzu poniżej
+          </h3>
+
+          <label class="modal-labels">
+            <span>Imię</span>
+            <svg class="label-position" weight="13" height="13">
+              <use
+                class="modal-formul-icons"
+                href="./images/icons.svg#icon-person"
+              ></use>
+            </svg>
+            <input class="modal-holder" type="name" name="Imię" />
           </label>
 
-          <label>
-            Password
-            <input type="password" name="password" />
+          <label class="modal-labels">
+            <span>Telefon</span>
+            <svg class="label-position" weight="13" height="13">
+              <use
+                class="modal-formul-icons"
+                href="./images/icons.svg#icon-phone"
+              ></use>
+            </svg>
+            <input class="modal-holder" type="telephone" name="Telefon" />
           </label>
-
-          <button type="submit">Submit</button>
+          <label class="modal-labels">
+            <span>Email</span>
+            <svg class="label-position" weight="13" height="13">
+              <use
+                class="modal-formul-icons"
+                href="./images/icons.svg#icon-mail"
+              ></use>
+            </svg>
+            <input class="modal-holder" type="password" name="password" />
+          </label>
+          <label class="text-area-label">
+            Komentarz
+            <textarea
+              class="text-area"
+              name="feedback"
+              rows=""
+              placeholder="Wprowadź tekst"
+            ></textarea>
+          </label>
+          <fieldset class="privacy-fieldset">
+            <!-- <legend>Your favourite programming language</legend> -->
+            <label>
+              <input type="checkbox" name="language" value="privacy" />
+              <span
+                >Oświadczam iż akceptuję Regulamin i Politykę Prywatności.</span
+              >
+            </label>
+          </fieldset>
+          <button class="modal-button-send" type="submit">Wyślij</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <!-- <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" data-modal-close>
-          <svg width="18" height="18">
-            <use class="close-btn" href="./images/icons.svg#icon-Vector"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <script src="./js/modal.js"></script> -->
   </body>
 </html>
