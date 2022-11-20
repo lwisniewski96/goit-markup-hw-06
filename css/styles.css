@@ -717,6 +717,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
+  cursor: pointer;
 }
 .newsletter-button-join:hover,
 .newsletter-button-join:focus {
@@ -810,5 +811,8 @@ img {
   margin-left: 164px;
   margin-right: 164px;
 }
-.privacy-fieldset {
+
+.privacy-label {
+  padding-left: 55px;
+  padding-right: 54px;
 }
