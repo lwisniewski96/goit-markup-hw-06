@@ -724,6 +724,7 @@ img {
 }
 .newsletter-button-join:hover,
 .newsletter-button-join:focus {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .newsletter-form {
   margin-left: auto;
@@ -779,21 +780,23 @@ img {
 }
 .modal-formul-icons:hover,
 .modal-formul-icons:focus {
+  border-color: var(--main-color);
+  outline: var(--main-color);
   fill: var(--main-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-holder {
-  /* position: relative; */
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
   cursor: pointer;
+  transition: border-color 2s, outline 2s;
 }
-.modal-holder:hover,
+/* .modal-holder:hover, */
 .modal-holder:focus {
-  color: var(--main-color);
+  outline-color: var(--main-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -802,6 +805,12 @@ img {
   height: 120px;
   resize: none;
   padding: 15px 16px;
+  cursor: pointer;
+}
+.text-area:hover,
+.text-area:focus {
+  border-color: var(--main-color);
+  outline: var(--main-color);
 }
 
 .text-area-label {
@@ -838,7 +847,17 @@ img {
 
   /* padding: 30px 40px 10px 40px; */
 }
+.modal-labels:hover,
+.modal-holder {
+  border-color: var(--main-color);
+  outline-color: var(--main-color);
+}
+.modal-labels:hover,
 .label-position {
+  fill: var(--main-color);
+}
+.modal-labels:has(.modal-holder:focus) .label-position {
+  fill: var(--main-color);
   position: absolute;
   top: 50%;
   left: 13px;
@@ -870,7 +889,7 @@ img {
 
 .check__input {
   position: absolute;
-  clip: rect(0 0 0 0);
+  /* clip: rect(0 0 0 0); */
   width: 1px;
   height: 1px;
   margin: -1px;
