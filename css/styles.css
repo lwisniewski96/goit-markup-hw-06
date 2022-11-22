@@ -665,11 +665,12 @@ img {
 }
 
 .modal {
+  width: 100%;
   position: absolute;
   width: 528px;
   height: 581px;
   left: 50%;
-  /* right: 50%; */
+  padding: 40px;
   top: 50%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -718,12 +719,14 @@ img {
   font-size: 16px;
   line-height: 30px;
   cursor: pointer;
+  border: none;
+  margin-left: 12px;
 }
 .newsletter-button-join:hover,
 .newsletter-button-join:focus {
 }
 .newsletter-form {
-  padding-left: 78px;
+  margin-left: auto;
 }
 .newsletter-holder {
   width: 358px;
@@ -734,39 +737,39 @@ img {
   padding: 15px;
   height: 50px;
   font-family: inherit;
+  color: var(--fourth-color);
 }
 .newsletter-text {
   display: block;
   color: var(--fourth-color);
 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-weight: 700px;
+
+  margin-bottom: 20px;
 }
 .newsletter-icon {
   fill: var(--fourth-color);
 }
 .newsletter-svg-position {
   position: absolute;
-  left: 0px;
-  top: 13px;
+  transform: translateY(-50%);
+  right: 20px;
+  top: 50%;
   bottom: 13px;
-  right: 8px;
+  /* right: 8px; */
 }
 
 /* WNĘTRZE MODALA */
 
 .modal-main-text {
-  margin-top: 40px;
-  text-align: center;
+  /* margin-top: 40px; */
+  /* text-align: center; */
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 23.44px;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
 
   color: #212121;
 }
@@ -774,26 +777,33 @@ img {
 .modal-formul-icons {
   position: absolute;
 }
+.modal-formul-icons:hover,
+.modal-formul-icons:focus {
+  fill: var(--main-color);
+}
 .modal-holder {
-  position: relative;
-  width: 448px;
+  /* position: relative; */
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 30px 40px 10px 40px;
-  margin-left: 40px;
+  padding-left: 42px;
 }
 
 .text-area {
-  width: 448px;
+  width: 100%;
   height: 120px;
-  margin-top: 28px;
-  margin-right: 40px;
-  margin-left: 40px;
+  resize: none;
+  padding: 15px 16px;
 }
 
 .text-area-label {
-  padding: 30px 40px 10px 40px;
+  margin: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+  /* padding: 30px 40px 10px 40px; */
 }
 
 .modal-button-send {
@@ -808,24 +818,98 @@ img {
   padding: 10px 76px 10px 76px;
   cursor: pointer;
   font-family: inherit;
-  margin-top: 74px;
-  margin-left: 164px;
-  margin-right: 164px;
-}
-
-.privacy-label {
-  padding-left: 55px;
-  padding-right: 54px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .modal-labels {
   position: relative;
-  padding: 30px 40px 10px 40px;
+  display: block;
+  margin-bottom: 10px;
+  /* padding-left: 40px; */
+
+  /* padding: 30px 40px 10px 40px; */
 }
 .label-position {
   position: absolute;
-  width: 13px;
-  top: 30px;
-  z-index: 5;
-  left: 15px;
+  top: 50%;
+  left: 13px;
+}
+
+.text-in-modal {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 4px;
+  display: block;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+.option {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/* Check */
+
+.check {
+  padding-left: 2.2em;
+  margin-top: 20px;
+}
+
+.check__input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.check__box {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -1em;
+  width: 0.6em;
+  height: 0.6em;
+  overflow: hidden;
+  border-radius: 0.05em;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em #4a90e2;
+}
+
+/* Checked */
+
+.check__input:checked + .check__box {
+  background-color: #4a90e2;
+  background-image: url(images/check.newsletter-svg-position);
+}
+
+/* Focused */
+
+.check__input:focus + .check__box {
+  box-shadow: 0 0 0 0.1em #4a90e2, 0 0 0 0.2em #7ed321;
+}
+
+/* Disabled */
+
+.check__input:disabled + .check__box {
+  box-shadow: 0 0 0 0.1em #9b9b9b;
+}
+
+.check__input:checked:disabled + .check__box {
+  background-color: #9b9b9b;
+}
+.blue-checkbox-text {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.blue-checkbos-text:hover,
+.blue-checkbox-text:focus {
+  color: var(--main-color);
 }
